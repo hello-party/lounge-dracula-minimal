@@ -1,0 +1,209 @@
+
+/* - Core -- */
+
+* {
+  font-family: 'OperatorMono Nerd Font','Courier Prime', monospace;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-size: 1em!important;
+}
+
+textarea#user-specified-css-input {
+  height: 400px;
+  width: 800px;
+}
+
+/* - Chat Tweaks ---*/
+
+/* -- Input --- */
+
+#form #input {
+  font-size:0.8em!important;
+}
+
+/* -- Header --- */
+
+.header {
+  line-height: 30px;
+  height: 30px;
+  padding: 0px 6px;
+  font-size: .7em!important;
+}
+
+#chat button.mentions:before, 
+#chat button.menu:before, 
+#viewport .lt:before, 
+#viewport .rt:before {
+  line-height: 18px;
+}
+
+#chat button.mentions {
+  margin-top: 5px
+}
+
+/* -- Buffer List --- */
+
+#sidebar {
+  background-color: #282a36;
+}
+
+#sidebar .networks {
+  padding: 10px 0;
+}
+
+#sidebar .network {
+  margin-bottom: 10px;
+}
+
+.badge {
+  background: transparent!important;
+  color: #f8f8f2!important;
+  font-weight: 700;
+  padding: 8px 2px!important;
+  margin: 0;
+  line-height: 0!important;
+  font-size: .4em!important;
+  max-height: 15px;
+}
+
+/* -- Remove Chat Bubbles --- */
+
+.channel-list-item[data-type=channel]::before, .context-menu-chan::before,.channel-list-item[data-type=query]:before, 
+.context-menu-action-query:before, .context-menu-query:before {
+  content:"";
+  display:none
+}
+
+
+/* --- Buffer Highlights --- */
+/* ---- Self Highlight --- */
+
+.self {
+  background: #44475a20!important; 
+  color: #f8f8f2!important;
+}
+
+#sidebar [title*='mention'] {
+  background-color: #ff5555;
+  color:#f8f8f2!important;
+}
+
+/* --- Current Channel Indicator --- */
+.channel-list-item.active span.name:before{
+  content:"▸ ";
+  padding-left:0px;
+}
+
+.channel-list-item.active, 
+.channel-list-item.active span.name {
+  background-color: #6272a4!important;
+  font-weight: 700!important;
+}
+
+/* -- Nick Buffer --- */
+
+#sidebar .add-channel-tooltip, 
+.channel-list-item .badge, 
+.channel-list-item .close-tooltip {
+  line-height: 1em;
+}
+
+#sidebar {
+  width: 150px;
+}
+
+#chat .user-mode:before {
+  display:none;
+}
+ 
+#chat .userlist {
+  width: 100px;
+  font-size:.8em!important;
+}
+
+#chat .userlist .count {
+  background: transparent;
+}
+
+#chat .user-mode {
+  margin-bottom: 0px;
+}
+
+/* -- Noise Reduction --- */
+
+#chat ::-webkit-scrollbar {
+  width:0px;
+}
+
+#chat .hostmask {
+  display: none;
+}
+
+.channel-list-item,
+#chat .time,
+#chat .from,
+#chat .content {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: .8em!important;
+  line-height: 1.4em;
+}
+
+#sidebar, 
+#chat .content, 
+#chat .header, 
+#chat .userlist {
+border: 0px;}
+
+/* -- Channel Buffer --- */
+
+#chat .content {
+  padding-left: 10px;
+}
+
+#chat .messages {
+  display: block;
+}
+
+#chat .time {
+  display: inline;
+  color: #415364;
+}
+
+#chat .from {
+  width: 100px;
+}
+
+#chat .msg.self .content * {
+  font-size: 1em;
+}
+
+#chat .unread-marker-text:before {
+  content: "";
+  padding: 3px 0px;
+}
+
+#chat .msg[data-type=action] .from:before {
+  content: "*";
+}
+
+#chat .msg[data-type=action] {
+  font-style: italic;
+}
+
+#chat .count:before, 
+#chat .userlist .count {
+  line-height:25px;
+  height: 30px;
+  font-size:0.8em;
+}
+
+#chat .names .user {
+  line-height: 1.2em;
+}
+
+#chat .userlist .search {
+    padding: 0px 30px 10px 13px;
+    font-size: 0.8em!important;
+}
